@@ -1,0 +1,85 @@
+<header class="header-section space-y-16">
+  <div class="space-y-4 text-center">
+    <h1 class="header-title">
+      Web Design
+      <span class="header-title--italic">& Framer</span>
+    </h1>
+
+    <p class="header-description">
+      Premium web design, development, and SEO services to help your business
+      stand out.
+    </p>
+  </div>
+
+  <app-button-text
+    [badge]="{
+      name: Icon.ArrowDown,
+      iconSize: Size.LARGE,
+      svgSize: Size.LARGE,
+    }"
+    text="My Services"
+    fragment="services"
+  />
+
+  <img appAnimateOnScroll src="/images/services/services-header.png" alt="" />
+</header>
+
+<!-- stats section -->
+<section appAnimateOnScroll class="align-col container pt-20">
+  <div class="grid grid-cols-2 gap-16 md:grid-cols-4">
+    <!-- stat - 1 -->
+    <div class="space-y-1 text-center uppercase">
+      <p class="text-meta">Clients</p>
+      <h1
+        class="text-5xl md:text-6xl"
+        [countUp]="150"
+        [options]="{ enableScrollSpy: true, suffix: '+' }"
+      >
+        0
+      </h1>
+    </div>
+
+    <!-- stat - 1 -->
+    <div class="space-y-1 text-center uppercase">
+      <p class="text-meta">Projects</p>
+      <h1
+        class="text-5xl md:text-6xl"
+        [countUp]="300"
+        [options]="{ enableScrollSpy: true, suffix: '+' }"
+      >
+        0
+      </h1>
+    </div>
+
+    <!-- stat - 1 -->
+    <div class="space-y-1 text-center uppercase">
+      <p class="text-meta">Happy Clients</p>
+      <h1
+        class="text-5xl md:text-6xl"
+        [countUp]="100"
+        [options]="{ enableScrollSpy: true, suffix: '%' }"
+      >
+        0
+      </h1>
+    </div>
+
+    <!-- stat - 1 -->
+    <div class="space-y-1 text-center uppercase">
+      <p class="text-meta">Followers</p>
+      <h1
+        class="text-5xl md:text-6xl"
+        [countUp]="100"
+        [options]="{ enableScrollSpy: true, suffix: 'K' }"
+      >
+        0
+      </h1>
+    </div>
+  </div>
+</section>
+
+<!-- services section -->
+<section id="services" class="container flex flex-col space-y-8 pt-20 md:pt-40">
+  @for (service of services(); track $index) {
+    <app-service-card appAnimateOnScroll [serviceData]="service" />
+  }
+</section>

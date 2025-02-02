@@ -1,0 +1,43 @@
+<header class="header-section space-y-4">
+  <p class="text-meta uppercase">Pricing</p>
+  <h1 class="header-title">
+    Experience the Power of
+    <span class="header-title--italic">Premium Web design</span>
+  </h1>
+  <p class="header-description">
+    Choose a package that suits your needs and budget. Transparent pricing with
+    no hidden fees.
+  </p>
+</header>
+
+<!-- Pricing Section  -->
+<section
+  class="container grid grid-cols-1 gap-8 pt-16 md:grid-cols-2 lg:grid-cols-3"
+>
+  <!-- pricing card -->
+  @for (card of cards; track $index) {
+    <app-pricing-card
+      appAnimateOnScroll
+      [data]="card"
+      class="transition duration-300 hover:-translate-y-3"
+    />
+  }
+</section>
+
+<!-- FAQ section -->
+<section
+  class="container grid grid-cols-1 gap-8 pt-8 md:gap-24 md:pt-40 lg:grid-cols-2"
+>
+  <div class="space-y-2 pt-8">
+    <p class="text-meta uppercase">FAQ</p>
+    <h2 class="text-4xl md:text-5xl">
+      Common <span class="mt-3 block font-gambetta italic"> Questions</span>
+    </h2>
+  </div>
+
+  <div class="flex flex-col space-y-8">
+    @for (faq of faqs; track $index) {
+      <app-accordion appAnimateOnScroll [accordion]="faq" />
+    }
+  </div>
+</section>

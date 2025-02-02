@@ -1,0 +1,8 @@
+.accordion {
+  @apply card w-full p-8 text-left hover:border-primary-300;
+  transition: 0.3s ease-in;
+}
+
+.content {
+  @apply overflow-hidden font-chillax transition duration-300 ease-in;
+}

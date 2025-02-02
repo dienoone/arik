@@ -1,0 +1,80 @@
+<nav class="fixed top-12 z-20 flex w-full items-center md:justify-center">
+  <div class="w-full md:w-fit">
+    <!-- Main navigation container -->
+    <div
+      class="card relative flex items-center justify-between space-x-12 p-2 backdrop-blur-lg md:space-x-16"
+    >
+      <!-- Logo -->
+      <a routerLink="/home">
+        <img src="logo.png" alt="Logo" />
+      </a>
+
+      <!-- Navigation controls -->
+      <div class="flex items-center justify-between space-x-4">
+        <!-- Desktop navigation -->
+        <nav class="hidden md:block">
+          <ul class="flex items-center space-x-3">
+            @for (link of navLinks; track $index) {
+              <li>
+                <a [routerLink]="link.route" class="text-meta uppercase">
+                  {{ link.label }}
+                </a>
+              </li>
+            }
+          </ul>
+        </nav>
+
+        <!-- Action items -->
+        <div class="flex items-center space-x-4">
+          <a
+            routerLink="/contact"
+            class="hidden bg-primary-400 p-4 uppercase text-background md:block"
+          >
+            Let's Talk
+          </a>
+          <button
+            class="p-2"
+            (click)="mobileNavigationVisible = !mobileNavigationVisible"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="svg-lg md:hidden"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile navigation -->
+    <div
+      class="flex justify-center bg-secondary py-16 md:hidden"
+      [class.hidden]="!mobileNavigationVisible"
+    >
+      <ul class="flex flex-col items-center space-y-4">
+        @for (link of navLinks; track $index) {
+          <li>
+            <a [routerLink]="link.route" class="text-meta uppercase">
+              {{ link.label }}
+            </a>
+          </li>
+        }
+        <a
+          routerLink="/contact"
+          class="bg-primary-400 px-4 py-2 uppercase text-background"
+        >
+          Let's Talk
+        </a>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+<div class="card flex h-full flex-col justify-between space-y-8">
+  <div class="space-y-2">
+    <p class="text-meta">{{ card().number }}</p>
+    <h4 class="text-lg font-light uppercase md:text-xl">{{ card().title }}</h4>
+    <p class="font-chillax">{{ card().description }}</p>
+  </div>
+
+  <app-button-text
+    [badge]="{
+      name: Icon.ArrowUpRight,
+      iconSize: Size.SMALL,
+      svgSize: Size.SMALL,
+    }"
+    styles="text-meta"
+    [text]="card().link"
+  />
+</div>

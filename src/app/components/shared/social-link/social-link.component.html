@@ -1,0 +1,16 @@
+<a
+  routerLink="/work"
+  class="card group flex items-center justify-between gap-3 p-4 transition duration-500 hover:border-primary-300"
+>
+  <div href="" class="flex items-center space-x-4">
+    <img [src]="imgPath" class="svg-lg" />
+
+    <p class="text-meta text-primary-400">{{ social().name }}</p>
+  </div>
+
+  <img
+    src="/assets/icons/ph_arrow-up-right-light.svg"
+    alt=""
+    class="svg transition duration-500 group-hover:rotate-45"
+  />
+</a>

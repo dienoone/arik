@@ -1,0 +1,30 @@
+<div class="card relative flex h-full flex-col p-8">
+  @if (data().tag) {
+    <div
+      class="absolute right-5 top-5 rounded bg-primary-400 p-2 uppercase text-background"
+    >
+      {{ data().tag }}
+    </div>
+  }
+
+  <div class="mb-8 flex flex-col gap-2">
+    <p class="text-meta uppercase text-primary-400">{{ data().type }}</p>
+    <h3 class="text-3xl">{{ data().price }}</h3>
+    <p class="font-chillax">{{ data().description }}</p>
+  </div>
+
+  <!-- Add grow to features list -->
+  <ul class="mb-8 flex grow flex-col gap-4">
+    @for (feature of data().features; track $index) {
+      <li class="border-b pb-4 text-meta uppercase last:border-b-0 last:pb-0">
+        {{ feature }}
+      </li>
+    }
+  </ul>
+
+  <button
+    class="w-full bg-primary-400 p-3 text-center uppercase text-background"
+  >
+    Get Started
+  </button>
+</div>

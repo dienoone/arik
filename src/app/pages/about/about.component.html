@@ -1,0 +1,98 @@
+<div class="header-section">
+  <div class="grid grid-cols-1 gap-4 min-[1150px]:grid-cols-12">
+    <div class="min-[1150px]:col-span-5">
+      <img
+        src="https://framerusercontent.com/images/sitQqXXWe18lNYFUMPSXSHcM3A.png?scale-down-to=1024"
+        alt="Web design and development illustration"
+        class="max-w-sm object-cover min-[1150px]:sticky min-[1150px]:top-[150px]"
+      />
+    </div>
+    <div class="space-y-20 pt-16 lg:space-y-32 min-[1150px]:col-span-7">
+      <div class="space-y-16">
+        <div class="space-y-4">
+          <h1 class="header-title">
+            Arik
+            <span class="header-title--italic">Andersson</span>
+          </h1>
+
+          <p class="header-description mx-0">
+            Premium web design, development, and SEO services to help your
+            business stand out.
+          </p>
+        </div>
+
+        <app-button-text
+          [badge]="{
+            name: Icon.ArrowDown,
+            iconSize: Size.LARGE,
+            svgSize: Size.LARGE,
+          }"
+          text="About Me"
+          class="inline-block"
+          fragment="about"
+        />
+      </div>
+
+      <div class="space-y-4">
+        <!--  -->
+        <div id="about" appAnimateOnScroll class="card space-y-4">
+          <p class="text-meta">Arik Andersson</p>
+          <h2 class="text-4xl lg:text-5xl">
+            Your Partner in Bringing Your Web Design Vision to Life
+          </h2>
+          <div class="space-y-8 font-chillax text-base">
+            <p>
+              As a freelance web designer and developer, I bring a unique
+              combination of creativity and technical expertise to every
+              project. With a keen eye for design and a passion for delivering
+              user-friendly web experiences, I work closely with clients to
+              understand their needs and bring their vision to life.
+            </p>
+            <p>
+              My approach is rooted in collaboration and communication, and I
+              take pride in my ability to explain technical concepts in simple
+              terms. Whether I'm developing a new website from scratch or
+              optimizing an existing site for search engines, I always strive
+              for excellence in both form and function. With a dedication to
+              quality and a commitment to staying on top of the latest trends
+              and technologies, I am confident in my ability to deliver
+              exceptional results that exceed my clients' expectations.
+            </p>
+          </div>
+          <div class="card noise relative p-0">
+            <img src="/images/arik.png" alt="" class="w-full object-cover" />
+          </div>
+        </div>
+
+        <!-- social links -->
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          @for (socialLink of socialLinks; track $index) {
+            <app-social-link appAnimateOnScroll [social]="socialLink" />
+          }
+        </div>
+
+        <div appAnimateOnScroll class="card space-y-8">
+          <p class="text-muted uppercase">Awards</p>
+          <ul class="space-y-8 lg:space-y-12">
+            @for (award of awards; track $index) {
+              <li
+                class="flex flex-col space-y-4 border-b pb-6 last:border-b-0 last:pb-0 md:flex-row md:items-center md:justify-between md:space-y-0"
+              >
+                <p
+                  class="col-span-12 text-meta uppercase text-primary-400 md:col-span-3 md:text-base"
+                >
+                  {{ award.award }}
+                </p>
+                <p
+                  class="col-span-12 font-chillax text-base md:col-span-9 md:text-lg"
+                >
+                  {{ award.year }}
+                </p>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

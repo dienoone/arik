@@ -1,0 +1,9 @@
+<a
+  [routerLink]="[url()]"
+  [fragment]="fragment()"
+  class="group flex items-center gap-3"
+  [class]="styles()"
+>
+  <app-badge [badge]="badge()" />
+  <span class="uppercase group-hover:text-primary-400">{{ text() }}</span>
+</a>

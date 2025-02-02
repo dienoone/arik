@@ -1,0 +1,3 @@
+.link {
+  @apply uppercase text-primary-300 hover:text-primary-400;
+}

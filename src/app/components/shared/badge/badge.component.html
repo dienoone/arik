@@ -1,0 +1,13 @@
+<div class="group" [ngClass]="iconSizeClass" [class]="styles()">
+  @if (isIcon(validatedBadge().name)) {
+    <img
+      [src]="imgPath"
+      [ngClass]="svgSizeClass"
+      [class]="validatedBadge().animation"
+    />
+  } @else {
+    <p class="mt-[2.5px] text-meta uppercase text-primary-400">
+      {{ validatedBadge().name }}
+    </p>
+  }
+</div>

@@ -1,0 +1,22 @@
+<a
+  [routerLink]="['/work', workCard().id]"
+  class="card noise group relative block p-0"
+>
+  <img [src]="workCard().imageUrl" alt="" class="w-full object-cover" />
+  <div class="center-row absolute top-0 h-full w-full">
+    <app-badge
+      [badge]="{
+        name: Icon.ArrowRight,
+        animation: 'transition duration-700 group-hover:-rotate-45',
+      }"
+      class="opacity-0 transition duration-700 group-hover:opacity-100"
+    />
+  </div>
+
+  <div
+    class="bg-white/5 absolute bottom-8 left-[5%] z-[2] flex w-[90%] items-center justify-between rounded border border-white-100 p-3 backdrop-blur-md backdrop-brightness-110"
+  >
+    <span>{{ workCard().title }}</span>
+    <span class="text-meta uppercase">{{ workCard().subTitle }}</span>
+  </div>
+</a>

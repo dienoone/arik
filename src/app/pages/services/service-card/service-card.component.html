@@ -1,0 +1,33 @@
+<div class="card space-y-8 p-8 md:space-y-16 md:p-16">
+  <!--  -->
+  <div class="space-y-4">
+    <p class="text-meta uppercase text-primary-400">
+      {{ serviceData().subtitle }}
+    </p>
+    <h1 class="text-3xl md:text-4xl lg:text-5xl">{{ serviceData().title }}</h1>
+  </div>
+
+  <div class="card noise relative p-0">
+    <img [src]="serviceData().imageUrl" alt="" class="w-full object-cover" />
+  </div>
+
+  <!-- description -->
+  <ul class="space-y-12">
+    @for (item of serviceData().items; track $index) {
+      <li
+        class="grid grid-cols-12 gap-2 border-b pb-12 last:border-b-0 last:pb-0"
+      >
+        <p
+          class="col-span-12 text-meta uppercase text-primary-400 sm:text-sm md:col-span-3 md:text-lg"
+        >
+          {{ item.title }}
+        </p>
+        <p
+          class="col-span-12 font-chillax text-base sm:text-sm md:col-span-9 md:text-lg"
+        >
+          {{ item.description }}
+        </p>
+      </li>
+    }
+  </ul>
+</div>

@@ -1,0 +1,26 @@
+<div class="relative card p-12">
+  <!-- duration -->
+  <div class="absolute card top-5 right-5 p-2">
+    <p class="uppercase text-xs font-chillax text-primary-400">
+      {{ data().duration }}
+    </p>
+  </div>
+
+  <div class="space-y-8">
+    <!-- heading  -->
+    <div class="space-y-4">
+      <div class="space-y-2">
+        <p class="text-meta uppercase">{{ data().subTitle }}</p>
+        <h4 class="text-xl uppercase">{{ data().title }}</h4>
+      </div>
+      <p class="font-chillax text-base">{{ data().descrption }}</p>
+    </div>
+
+    <!-- steps -->
+    <ul class="space-y-4 list-disc list-inside text-primary-400">
+      @for (step of data().steps; track $index) {
+      <li>{{ step }}</li>
+      }
+    </ul>
+  </div>
+</div>

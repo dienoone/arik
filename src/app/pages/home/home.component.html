@@ -1,0 +1,194 @@
+<header class="mt-24 flex flex-col items-center lg:mt-20">
+  <img
+    appBlurring
+    src="https://framerusercontent.com/images/sitQqXXWe18lNYFUMPSXSHcM3A.png?scale-down-to=1024"
+    alt="Web design and development illustration"
+    class="mb-12 h-auto w-full max-w-sm transition-all duration-500 md:max-w-md lg:max-w-lg"
+  />
+
+  <div appAnimateOnScroll class="space-y-8 text-center">
+    <h1 class="text-7xl font-light md:text-8xl lg:text-9xl">
+      Web Designer <span class="block font-gambetta italic">& Developer</span>
+    </h1>
+    <p class="mx-auto max-w-xl font-chillax text-2xl">
+      Premium web design, development, and SEO services to help your business
+      stand out.
+    </p>
+
+    <!-- fragment="process" -->
+    <app-button-text
+      [badge]="{
+        name: Icon.ArrowDown,
+        iconSize: Size.LARGE,
+        svgSize: Size.LARGE,
+      }"
+      text="My Services"
+      styles="tracking-tight"
+      class="inline-block"
+      fragment="test"
+    />
+  </div>
+</header>
+
+<section appAnimateOnScroll class="mx-auto max-w-4xl overflow-x-clip pt-32">
+  <div class="center-row justify-between space-x-12">
+    <img src="/images/campanies/campany-1.svg" alt="" class="shrink-0" />
+    <img src="/images/campanies/campany-2.svg" alt="" class="shrink-0" />
+    <img src="/images/campanies/campany-3.svg" alt="" class="shrink-0" />
+    <img src="/images/campanies/campany-4.svg" alt="" class="shrink-0" />
+    <img src="/images/campanies/campany-5.svg" alt="" class="shrink-0" />
+    <img src="/images/campanies/campany-6.svg" alt="" class="shrink-0" />
+  </div>
+</section>
+
+<!-- services section -->
+<section
+  appAnimateOnScroll
+  class="container grid grid-cols-1 gap-8 pt-20 sm:grid-cols-2 lg:grid-cols-3"
+>
+  @for (serviceCard of serviceCards; track $index) {
+    <app-home-service-card [card]="serviceCard" />
+  }
+</section>
+
+<!-- work section -->
+<section class="section-container">
+  <div appAnimateOnScroll class="center-row justify-between px-8 pb-8">
+    <h3 class="text-xl md:text-3xl">
+      Selected <span class="font-gambetta italic">Work</span>
+    </h3>
+
+    <app-button-text
+      [badge]="{
+        name: Icon.ArrowUpRight,
+        animation: 'group-hover:rotate-[45deg]',
+      }"
+      text="See All"
+    />
+  </div>
+
+  <div
+    appAnimateOnScroll
+    class="grid cursor-pointer grid-cols-1 gap-8 md:grid-cols-2"
+  >
+    @for (work of workCards(); track $index) {
+      <app-work-card [workCard]="work" />
+    }
+  </div>
+</section>
+
+<!-- Process section -->
+<section id="process" class="section-container">
+  <!-- heading -->
+  <div
+    appAnimateOnScroll
+    class="flex flex-col items-center space-y-12 text-center"
+  >
+    <!--  -->
+    <div class="space-y-4">
+      <p class="text-meta uppercase text-primary-400">The Process</p>
+      <h2 class="header-title">
+        Your Website
+        <span class="header-title--italic">in 5 steps</span>
+      </h2>
+      <p class="header-description">
+        Our process ensures that we create a website tailored to your business
+        needs.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center space-y-4">
+      <app-badge
+        [badge]="{
+          name: Icon.ArrowDown,
+          iconSize: Size.LARGE,
+          svgSize: Size.LARGE,
+        }"
+        class="mb-24 md:mb-0"
+      />
+
+      <!-- TODO: Adjust this hight -->
+      <div class="hidden h-24 w-0.5 border md:block"></div>
+    </div>
+  </div>
+
+  <app-time-line />
+</section>
+
+<!-- Testimonials Section -->
+<section class="section-container flex flex-col space-y-16">
+  <!-- heading -->
+  <div
+    appAnimateOnScroll
+    class="flex flex-col items-center space-y-4 text-center"
+  >
+    <h2 class="header-title">
+      What my<span class="header-title--italic">Clients says</span>
+    </h2>
+    <p class="header-description">
+      See what my clients have to say about working with me and the results I
+      helped them achieve.
+    </p>
+  </div>
+
+  <!-- Testimonials -->
+  <app-testimonials />
+</section>
+
+<!-- about section -->
+<section class="space-y-16 overflow-hidden pt-40">
+  <app-scroll-animation />
+  <!-- conent -->
+  <div class="container grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div>
+      <h2 class="text-4xl md:text-5xl">
+        A website that leaves
+        <span class="header-title--italic">a lasting impression!</span>
+      </h2>
+    </div>
+
+    <div class="space-y-8">
+      <p class="font-chillax text-lg">
+        Hi, I'm Arik Andersson - a freelancer specializing in premium web
+        design, development, and SEO services. I'm passionate about creating
+        unique and effective solutions for my clients, and I bring a personal
+        touch to every project. Let's work together to bring your vision to
+        life!
+      </p>
+
+      <div class="flex items-center space-x-4">
+        <app-badge
+          [badge]="{
+            name: Icon.Twitter,
+            svgSize: Size.LARGE,
+            iconSize: Size.LARGE,
+          }"
+        />
+
+        <app-badge
+          [badge]="{
+            name: Icon.Instagram,
+            svgSize: Size.LARGE,
+            iconSize: Size.LARGE,
+          }"
+        />
+
+        <app-badge
+          [badge]="{
+            name: Icon.Dribbble,
+            svgSize: Size.LARGE,
+            iconSize: Size.LARGE,
+          }"
+        />
+
+        <app-badge
+          [badge]="{
+            name: Icon.Behance,
+            svgSize: Size.LARGE,
+            iconSize: Size.LARGE,
+          }"
+        />
+      </div>
+    </div>
+  </div>
+</section>

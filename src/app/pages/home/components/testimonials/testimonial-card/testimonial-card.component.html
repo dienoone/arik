@@ -1,0 +1,26 @@
+<div class="card h-full space-y-8 p-8 sm:p-12">
+  <!-- heading -->
+  <div class="space-y-8">
+    <img [src]="testimonial().companyImageUrl" alt="" />
+
+    <!-- text -->
+    <div class="space-y-2">
+      <!--  -->
+      <h4 class="text-xl">
+        {{ testimonial().title }}
+      </h4>
+      <p class="font-chillax">{{ testimonial().description }}</p>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="flex items-center space-x-4">
+    <img [src]="testimonial().personImageUrl" alt="" class="rounded-full" />
+
+    <!-- text -->
+    <div>
+      <p class="text-meta text-primary-400">{{ testimonial().name }}</p>
+      <p class="text-chillax text-sm">{{ testimonial().companyName }}</p>
+    </div>
+  </div>
+</div>

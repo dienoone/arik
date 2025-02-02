@@ -1,0 +1,92 @@
+<header class="header-section space-y-16">
+  <div class="mx-auto max-w-5xl space-y-12">
+    <div class="space-y-6 text-center">
+      <h1 class="header-title">{{ workCard()?.title }}</h1>
+      <p class="header-description">
+        Modern and visually appealing website that reflected the client's brand.
+      </p>
+    </div>
+    <div
+      class="grid grid-cols-1 gap-4 text-center sm:grid-cols-2 md:grid-cols-4 md:gap-8"
+    >
+      <div class="card space-y-1 p-4">
+        <p class="text-mate uppercase">Client</p>
+        <p class="text-meta uppercase text-primary-400">Pawel Gola</p>
+      </div>
+
+      <div class="card space-y-1 p-4">
+        <p class="text-mate uppercase">Timeline</p>
+        <p class="text-meta uppercase text-primary-400">3 Weeks</p>
+      </div>
+      <div class="card space-y-1 p-4">
+        <p class="text-mate uppercase">Services</p>
+        <p class="text-meta uppercase text-primary-400">Template</p>
+      </div>
+      <div class="card space-y-1 p-4">
+        <p class="text-mate uppercase">Website</p>
+        <p class="text-meta uppercase text-primary-400">gola.io</p>
+      </div>
+    </div>
+
+    <app-button-text
+      [badge]="{
+        name: Icon.ArrowDown,
+        iconSize: Size.LARGE,
+        svgSize: Size.LARGE,
+      }"
+      text="More Details"
+      class="center-row"
+      url="details"
+    />
+  </div>
+
+  <div appAnimateOnScroll class="noise card relative p-0">
+    <img [src]="workCard()?.imageUrl" alt="" class="w-full object-cover" />
+  </div>
+</header>
+
+<!-- about section -->
+<section
+  id="details"
+  class="container grid grid-cols-1 gap-8 pt-32 md:grid-cols-2 md:gap-24"
+>
+  <div class="space-y-2">
+    <p class="text-meta uppercase">About</p>
+    <h2 class="text-4xl md:text-5xl">
+      Concept, Design, and Development. All-in-one.
+    </h2>
+  </div>
+
+  <div class="space-y-8">
+    <div appAnimateOnScroll class="card space-y-4 p-12">
+      <h4 class="text-2xl">Challenge</h4>
+      <p class="font-chillax">
+        Our client was struggling to attract and retain customers due to an
+        outdated and non-responsive website that didn't align with their brand
+        identity.
+      </p>
+    </div>
+
+    <div appAnimateOnScroll class="card space-y-4 p-12">
+      <h4 class="text-2xl">Goal</h4>
+      <p class="font-chillax">
+        Our goal was to create a modern and visually appealing website that
+        reflected the client's brand and delivered a seamless user experience.
+        The website needed to be responsive, easy to navigate, and optimized for
+        search engines to improve their online visibility.
+      </p>
+    </div>
+
+    <div appAnimateOnScroll class="card space-y-4 p-12">
+      <h4 class="text-2xl">Result</h4>
+      <p class="font-chillax">
+        Our team developed a custom website design that was not only visually
+        stunning but also user-friendly and optimized for search engines. The
+        client's website now showcases their products and services in a
+        professional and engaging manner, and has seen a significant increase in
+        organic traffic and customer engagement. The client is thrilled with the
+        final result and has received positive feedback from their customers.
+      </p>
+    </div>
+  </div>
+</section>

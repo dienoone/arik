@@ -1,1 +1,325 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth text-primary-400;
+  }
+
+  body {
+    @apply relative bg-background font-light;
+  }
+
+  p {
+    @apply text-primary-300;
+  }
+}
+
+@layer components {
+  /* Header */
+  .header-section {
+    @apply align-col container pt-48 md:pt-56;
+  }
+
+  .header-title {
+    @apply text-5xl font-light md:text-6xl lg:text-7xl;
+  }
+
+  .header-title--italic {
+    @apply mt-3 block font-gambetta italic;
+  }
+
+  .header-description {
+    @apply mx-auto max-w-xl font-chillax text-xl md:text-2xl;
+  }
+
+  /* section */
+  .section-container {
+    @apply container pt-20 md:pt-40;
+  }
+
+  .center-row {
+    @apply flex items-center justify-center;
+  }
+
+  .align-col {
+    @apply flex flex-col items-center;
+  }
+
+  .card {
+    @apply rounded border bg-primary-100 p-8 lg:p-12;
+  }
+
+  .icon-lg {
+    @apply icon h-12 w-12;
+  }
+
+  .svg-lg {
+    @apply h-5 w-5;
+  }
+
+  .icon {
+    @apply center-row h-10 w-10 rounded-full border bg-primary-100 p-2 text-red-50;
+    @apply group-hover:border-primary-200 group-hover:bg-primary-200;
+  }
+
+  .svg {
+    @apply h-4 w-4;
+  }
+
+  .icon-sm {
+    @apply icon h-8 w-8;
+  }
+
+  .svg-sm {
+    @apply h-[14px] w-[14px];
+  }
+
+  .noise::before {
+    content: '';
+    @apply absolute left-0 top-0 z-[1] h-full w-full bg-[url('/images/noise.png')];
+  }
+}
+
+/* FONTS */
+
+/* Gambetta Font Faces */
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-Light.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-LightItalic.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-Italic.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-Medium.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-MediumItalic.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-Semibold.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-SemiboldItalic.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-SemiboldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src:
+    url('/assets/fonts/Gambetta/Gambetta-BoldItalic.woff2') format('woff2'),
+    url('/assets/fonts/Gambetta/Gambetta-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Satoshi Font Faces */
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-Light.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-LightItalic.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-Italic.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-Medium.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-MediumItalic.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-BoldItalic.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-Black.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src:
+    url('/assets/fonts/Satoshi/Satoshi-BlackItalic.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi/Satoshi-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Chillax Font Faces */
+@font-face {
+  font-family: 'Chillax';
+  src:
+    url('/assets/fonts/Chillax/Chillax-Extralight.woff2') format('woff2'),
+    url('/assets/fonts/Chillax/Chillax-Extralight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src:
+    url('/assets/fonts/Chillax/Chillax-Light.woff2') format('woff2'),
+    url('/assets/fonts/Chillax/Chillax-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src:
+    url('/assets/fonts/Chillax/Chillax-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Chillax/Chillax-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src:
+    url('/assets/fonts/Chillax/Chillax-Medium.woff2') format('woff2'),
+    url('/assets/fonts/Chillax/Chillax-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src:
+    url('/assets/fonts/Chillax/Chillax-Semibold.woff2') format('woff2'),
+    url('/assets/fonts/Chillax/Chillax-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src:
+    url('/assets/fonts/Chillax/Chillax-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Chillax/Chillax-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+/* GLOBAL STYLES */

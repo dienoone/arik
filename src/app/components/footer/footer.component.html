@@ -1,0 +1,116 @@
+<footer class="space-y-6 bg-primary-100 p-8 md:space-y-20 md:p-16">
+  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:gap-16">
+    <!-- col - 1 -->
+    <div class="space-y-8">
+      <p class="text-xl">Logo</p>
+
+      <div class="flex flex-col space-y-4 text-meta">
+        <app-button-text
+          [badge]="{ name: Icon.Instagram }"
+          [text]="'Instagram'"
+          url="/work"
+        />
+
+        <app-button-text
+          [badge]="{ name: Icon.Twitter }"
+          [text]="'Twitter'"
+          url="work"
+        />
+
+        <app-button-text
+          [badge]="{ name: Icon.Dribbble }"
+          [text]="'Dribbble'"
+          url="/work"
+        />
+
+        <app-button-text
+          [badge]="{ name: Icon.Behance }"
+          [text]="'Behance'"
+          url="work"
+        />
+      </div>
+    </div>
+
+    <!-- col - 1 -->
+    <div class="space-y-8">
+      <p class="text-xl">Pages</p>
+
+      <div class="flex flex-col space-y-4 text-meta">
+        <a routerLink="/home" class="link"> Home </a>
+
+        <a routerLink="/services" class="link"> Services </a>
+
+        <a routerLink="/about" class="link"> About </a>
+
+        <a routerLink="contact" class="link"> Contact </a>
+      </div>
+
+      <a
+        routerLink=""
+        class="center-row w-fit space-x-2 bg-primary-400 px-5 py-3 text-center text-meta uppercase text-background"
+      >
+        <span class="text-background">More Templates</span>
+        <svg
+          class="svg-lg text-background"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.5625 6V15.75C18.5625 15.8992 18.5032 16.0423 18.3977 16.1477C18.2923 16.2532 18.1492 16.3125 18 16.3125C17.8508 16.3125 17.7077 16.2532 17.6022 16.1477C17.4968 16.0423 17.4375 15.8992 17.4375 15.75V7.35938L6.39374 18.3937C6.28931 18.4982 6.14768 18.5568 5.99999 18.5568C5.85231 18.5568 5.71067 18.4982 5.60624 18.3937C5.50181 18.2893 5.44315 18.1477 5.44315 18C5.44315 17.8523 5.50181 17.7107 5.60624 17.6063L16.6406 6.5625H8.24999C8.10081 6.5625 7.95773 6.50324 7.85225 6.39775C7.74676 6.29226 7.68749 6.14918 7.68749 6C7.68749 5.85082 7.74676 5.70774 7.85225 5.60225C7.95773 5.49676 8.10081 5.4375 8.24999 5.4375H18C18.1492 5.4375 18.2923 5.49676 18.3977 5.60225C18.5032 5.70774 18.5625 5.85082 18.5625 6Z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <div class="space-y-8">
+      <p class="text-xl">CMS</p>
+
+      <div class="flex flex-col space-y-4 text-meta">
+        <a routerLink="/work" class="link"> Work </a>
+
+        <a routerLink="/work/1" class="link"> Work Single </a>
+
+        <a routerLink="/blog" class="link"> Blog </a>
+
+        <a routerLink="/blog/1" class="link"> Blog POST </a>
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      <p class="text-xl">Utility Pages</p>
+
+      <div class="flex flex-col space-y-4 text-meta">
+        <a routerLink="./" class="link"> 404 Error Page </a>
+
+        <a routerLink="./" class="link"> Password Protected </a>
+
+        <a routerLink="./" class="link"> Styleguide </a>
+
+        <a routerLink="./" class="link"> Licensing </a>
+
+        <a routerLink="./" class="link"> Changelog </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copy right -->
+  <div
+    class="flex flex-col space-y-6 sm:flex-row sm:items-center sm:justify-between sm:space-y-0"
+  >
+    <p class="text-primary-300">
+      © 2022 Made by Pawel Gola. Powered by Framer..
+    </p>
+
+    <app-button-text
+      [badge]="{
+        name: Icon.ArrowUp,
+        iconSize: Size.LARGE,
+        svgSize: Size.LARGE,
+      }"
+      text="To Top"
+      [styles]="'flex-row-reverse'"
+      url="./"
+    />
+  </div>
+</footer>

@@ -1,0 +1,5 @@
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+  @for (testimonial of testimonials; track $index) {
+    <app-testimonial-card appAnimateOnScroll [testimonial]="testimonial" />
+  }
+</div>
