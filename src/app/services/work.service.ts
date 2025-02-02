@@ -8,25 +8,25 @@ export class WorkService {
   private works = signal<WorkCard[]>([
     {
       id: '1',
-      imageUrl: '/images/selectedWork/selected-work-1.png',
+      imageUrl: '/images/selected-work/selected-work-1.png',
       title: 'Space',
       subTitle: 'Web Design',
     },
     {
       id: '2',
-      imageUrl: '/images/selectedWork/selected-work-2.png',
+      imageUrl: '/images/selected-work/selected-work-2.png',
       title: 'Nova',
       subTitle: 'Web Design',
     },
     {
       id: '3',
-      imageUrl: '/images/selectedWork/selected-work-3.png',
+      imageUrl: '/images/selected-work/selected-work-3.png',
       title: 'Sonic',
       subTitle: 'Web Design',
     },
     {
       id: '4',
-      imageUrl: '/images/selectedWork/selected-work-4.png',
+      imageUrl: '/images/selected-work/selected-work-4.png',
       title: 'Solar',
       subTitle: 'Web Design',
     },

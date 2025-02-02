@@ -10,7 +10,6 @@ import { Icon } from '../../../enums/icon.enum';
   templateUrl: './badge.component.html',
   styleUrl: './badge.component.css',
 
-  // TODO: remove group because of time-line
   host: {
     class: 'group',
   },
@@ -24,8 +23,7 @@ export class BadgeComponent {
     const badge = this.badge();
 
     return {
-      iconSize: badge.iconSize ?? Size.DEFAULT,
-      svgSize: badge.svgSize ?? Size.DEFAULT,
+      size: badge.size ?? Size.DEFAULT,
       name: badge.name,
       animation: badge.animation ?? '',
     };
@@ -33,17 +31,17 @@ export class BadgeComponent {
 
   get iconSizeClass() {
     return {
-      icon: this.validatedBadge().iconSize === Size.DEFAULT,
-      'icon-lg': this.validatedBadge().iconSize === Size.LARGE,
-      'icon-sm': this.validatedBadge().iconSize === Size.SMALL,
+      icon: this.validatedBadge().size === Size.DEFAULT,
+      'icon-lg': this.validatedBadge().size === Size.LARGE,
+      'icon-sm': this.validatedBadge().size === Size.SMALL,
     };
   }
 
   get svgSizeClass() {
     return {
-      svg: this.validatedBadge().svgSize === Size.DEFAULT,
-      'svg-lg': this.validatedBadge().svgSize === Size.LARGE,
-      'svg-sm': this.validatedBadge().svgSize === Size.SMALL,
+      svg: this.validatedBadge().size === Size.DEFAULT,
+      'svg-lg': this.validatedBadge().size === Size.LARGE,
+      'svg-sm': this.validatedBadge().size === Size.SMALL,
     };
   }
 

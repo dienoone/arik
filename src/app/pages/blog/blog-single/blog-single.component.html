@@ -12,8 +12,7 @@
     <app-button-text
       [badge]="{
         name: Icon.ArrowDown,
-        iconSize: Size.LARGE,
-        svgSize: Size.LARGE,
+        size: Size.LARGE,
       }"
       text="More Details"
       class="center-row"
@@ -24,33 +23,35 @@
 
 <!-- stats section -->
 <section
-  class="container grid grid-cols-1 gap-4 px-16 py-4 sm:grid-cols-2 md:grid-cols-3"
+  class="section-container grid grid-cols-1 gap-4 px-16 sm:grid-cols-2 lg:grid-cols-3"
 >
-  <div class="card flex flex-1 items-center justify-between p-8">
-    <p class="text-meta uppercase">Date</p>
-    <p class="text-meta uppercase text-primary-400">{{ post()?.date }}</p>
+  <div class="card flex flex-1 items-center justify-between p-6">
+    <p class="uppercase">Date</p>
+    <p class="uppercase text-primary-400">{{ post()?.date }}</p>
   </div>
 
-  <div class="card flex flex-1 items-center justify-between p-8">
-    <p class="text-meta uppercase">Category</p>
-    <p class="text-meta uppercase text-primary-400">{{ post()?.tag }}</p>
+  <div class="card flex flex-1 items-center justify-between p-6">
+    <p class="uppercase">Category</p>
+    <p class="uppercase text-primary-400">{{ post()?.tag }}</p>
   </div>
-  <div class="card flex flex-1 items-center justify-between p-8">
-    <p class="text-meta uppercase">Reading time</p>
-    <p class="text-meta uppercase text-primary-400">5 Min</p>
+  <div class="card flex flex-1 items-center justify-between p-6">
+    <p class="uppercase">Reading time</p>
+    <p class="uppercase text-primary-400">5 Min</p>
   </div>
 </section>
 
-<div appAnimateOnScroll class="noise card container relative mt-8 p-0">
-  <img [src]="post()?.imageUrl" alt="" class="w-full object-cover" />
+<div class="px-4">
+  <div appAnimateOnScroll class="noise card container relative mt-8 p-0">
+    <img [src]="post()?.imageUrl" alt="" class="w-full object-cover" />
+  </div>
 </div>
 
 <!-- contents section -->
-<section class="container pt-20">
+<section class="section-container">
   <div id="details" class="space-y-12">
     <div appAnimateOnScroll class="space-y-4">
       <!--  -->
-      <h2 class="text-5xl">Elit ullamcorper dignissim</h2>
+      <h2 class="text-3xl md:text-5xl">Elit ullamcorper dignissim</h2>
       <p class="font-chillax text-base md:text-lg">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper
@@ -68,7 +69,7 @@
     </div>
     <div appAnimateOnScroll class="space-y-4">
       <!--  -->
-      <h2 class="text-5xl">Hendrerit dolor magna</h2>
+      <h2 class="text-3xl md:text-5xl">Hendrerit dolor magna</h2>
       <p class="font-chillax text-base md:text-lg">
         Tristique sollicitudin nibh sit amet commodo. Sit amet justo donec enim
         diam vulputate ut pharetra. Quis imperdiet massa tincidunt nunc pulvinar
@@ -80,7 +81,7 @@
     </div>
     <div appAnimateOnScroll class="space-y-4">
       <!--  -->
-      <h2 class="text-5xl">Hendrerit dolor magna</h2>
+      <h2 class="text-3xl md:text-5xl">Hendrerit dolor magna</h2>
       <p class="font-chillax text-base md:text-lg">
         Tristique sollicitudin nibh sit amet commodo. Sit amet justo donec enim
         diam vulputate ut pharetra. Quis imperdiet massa tincidunt nunc pulvinar
@@ -93,7 +94,7 @@
 
     <div class="space-y-4">
       <!-- card -->
-      <div appAnimateOnScroll class="card space-y-8 p-12">
+      <div appAnimateOnScroll class="card space-y-8">
         <!-- text -->
         <div class="space-y-4">
           <h3 class="text-3xl">Conclusion</h3>
@@ -141,7 +142,7 @@
 
 <div class="container pt-40">
   <div appAnimateOnScroll class="center-row justify-between px-8 pb-8">
-    <h3 class="text-3xl">
+    <h3 class="text-xl md:text-3xl">
       Related <span class="font-gambetta italic">News</span>
     </h3>
 

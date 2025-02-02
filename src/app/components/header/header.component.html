@@ -2,7 +2,7 @@
   <div class="w-full md:w-fit">
     <!-- Main navigation container -->
     <div
-      class="card relative flex items-center justify-between space-x-12 p-2 backdrop-blur-lg md:space-x-16"
+      class="card relative flex items-center justify-between space-x-12 p-4 backdrop-blur-lg md:space-x-16 md:px-4 md:py-2"
     >
       <!-- Logo -->
       <a routerLink="/home">
@@ -33,7 +33,7 @@
             Let's Talk
           </a>
           <button
-            class="p-2"
+            class="p-2 md:hidden"
             (click)="mobileNavigationVisible = !mobileNavigationVisible"
           >
             <svg
@@ -42,7 +42,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="svg-lg md:hidden"
+              class="svg-lg"
             >
               <path
                 stroke-linecap="round"

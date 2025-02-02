@@ -1,15 +1,13 @@
-<header class="header-section">
-  <div class="space-y-8 text-center">
-    <h1 class="text-7xl font-light md:text-8xl lg:text-9xl">Work</h1>
-    <p class="mx-auto max-w-xl font-chillax text-2xl">
-      My latest web design projects and see how we can help bring your ideas to
-      life.
-    </p>
-  </div>
+<header class="header-section space-y-8 text-center">
+  <h1 class="header-title">Work</h1>
+  <p class="header-description">
+    My latest web design projects and see how we can help bring your ideas to
+    life.
+  </p>
 </header>
 
 <section
-  class="container grid cursor-pointer grid-cols-1 gap-10 pt-24 md:grid-cols-2"
+  class="section-container grid cursor-pointer grid-cols-1 gap-10 md:grid-cols-2"
 >
   @for (card of workCards(); track $index) {
     <app-work-card appAnimateOnScroll [workCard]="card" />

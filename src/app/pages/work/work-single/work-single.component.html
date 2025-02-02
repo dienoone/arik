@@ -1,38 +1,38 @@
-<header class="header-section space-y-16">
+<header class="header-section block space-y-16 text-center">
   <div class="mx-auto max-w-5xl space-y-12">
-    <div class="space-y-6 text-center">
+    <div class="space-y-6">
       <h1 class="header-title">{{ workCard()?.title }}</h1>
       <p class="header-description">
         Modern and visually appealing website that reflected the client's brand.
       </p>
     </div>
+
     <div
-      class="grid grid-cols-1 gap-4 text-center sm:grid-cols-2 md:grid-cols-4 md:gap-8"
+      class="grid grid-cols-1 gap-4 self-stretch md:grid-cols-2 md:gap-8 lg:grid-cols-4"
     >
       <div class="card space-y-1 p-4">
-        <p class="text-mate uppercase">Client</p>
-        <p class="text-meta uppercase text-primary-400">Pawel Gola</p>
+        <p class="uppercase">Client</p>
+        <p class="uppercase text-primary-400">Pawel Gola</p>
       </div>
 
       <div class="card space-y-1 p-4">
-        <p class="text-mate uppercase">Timeline</p>
-        <p class="text-meta uppercase text-primary-400">3 Weeks</p>
+        <p class="uppercase">Timeline</p>
+        <p class="uppercase text-primary-400">3 Weeks</p>
       </div>
       <div class="card space-y-1 p-4">
-        <p class="text-mate uppercase">Services</p>
-        <p class="text-meta uppercase text-primary-400">Template</p>
+        <p class="uppercase">Services</p>
+        <p class="uppercase text-primary-400">Template</p>
       </div>
       <div class="card space-y-1 p-4">
-        <p class="text-mate uppercase">Website</p>
-        <p class="text-meta uppercase text-primary-400">gola.io</p>
+        <p class="uppercase">Website</p>
+        <p class="uppercase text-primary-400">gola.io</p>
       </div>
     </div>
 
     <app-button-text
       [badge]="{
         name: Icon.ArrowDown,
-        iconSize: Size.LARGE,
-        svgSize: Size.LARGE,
+        size: Size.LARGE,
       }"
       text="More Details"
       class="center-row"
@@ -48,7 +48,7 @@
 <!-- about section -->
 <section
   id="details"
-  class="container grid grid-cols-1 gap-8 pt-32 md:grid-cols-2 md:gap-24"
+  class="section-container grid grid-cols-1 gap-8 md:gap-24 lg:grid-cols-2"
 >
   <div class="space-y-2">
     <p class="text-meta uppercase">About</p>

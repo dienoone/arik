@@ -14,7 +14,7 @@
   }
 
   p {
-    @apply text-primary-300;
+    @apply text-meta text-primary-300;
   }
 }
 
@@ -29,11 +29,11 @@
   }
 
   .header-title--italic {
-    @apply mt-3 block font-gambetta italic;
+    @apply mt-4 block font-gambetta italic;
   }
 
   .header-description {
-    @apply mx-auto max-w-xl font-chillax text-xl md:text-2xl;
+    @apply mx-auto max-w-xl font-chillax text-lg md:text-2xl;
   }
 
   /* section */

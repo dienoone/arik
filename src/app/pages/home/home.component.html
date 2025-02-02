@@ -7,10 +7,10 @@
   />
 
   <div appAnimateOnScroll class="space-y-8 text-center">
-    <h1 class="text-7xl font-light md:text-8xl lg:text-9xl">
-      Web Designer <span class="block font-gambetta italic">& Developer</span>
+    <h1 class="header-title">
+      Web Designer <span class="header-title--italic">& Developer</span>
     </h1>
-    <p class="mx-auto max-w-xl font-chillax text-2xl">
+    <p class="header-description">
       Premium web design, development, and SEO services to help your business
       stand out.
     </p>
@@ -19,8 +19,7 @@
     <app-button-text
       [badge]="{
         name: Icon.ArrowDown,
-        iconSize: Size.LARGE,
-        svgSize: Size.LARGE,
+        size: Size.LARGE,
       }"
       text="My Services"
       styles="tracking-tight"
@@ -30,24 +29,35 @@
   </div>
 </header>
 
-<section appAnimateOnScroll class="mx-auto max-w-4xl overflow-x-clip pt-32">
+<section appAnimateOnScroll class="section-container overflow-x-hidden">
   <div class="center-row justify-between space-x-12">
     <img src="/images/campanies/campany-1.svg" alt="" class="shrink-0" />
     <img src="/images/campanies/campany-2.svg" alt="" class="shrink-0" />
     <img src="/images/campanies/campany-3.svg" alt="" class="shrink-0" />
-    <img src="/images/campanies/campany-4.svg" alt="" class="shrink-0" />
-    <img src="/images/campanies/campany-5.svg" alt="" class="shrink-0" />
-    <img src="/images/campanies/campany-6.svg" alt="" class="shrink-0" />
+    <img
+      src="/images/campanies/campany-4.svg"
+      alt=""
+      class="hidden shrink-0 md:block"
+    />
+    <img
+      src="/images/campanies/campany-5.svg"
+      alt=""
+      class="hidden shrink-0 md:block"
+    />
+    <img
+      src="/images/campanies/campany-6.svg"
+      alt=""
+      class="hidden shrink-0 md:block"
+    />
   </div>
 </section>
 
 <!-- services section -->
 <section
-  appAnimateOnScroll
-  class="container grid grid-cols-1 gap-8 pt-20 sm:grid-cols-2 lg:grid-cols-3"
+  class="section-container grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
 >
   @for (serviceCard of serviceCards; track $index) {
-    <app-home-service-card [card]="serviceCard" />
+    <app-home-service-card appAnimateOnScroll [card]="serviceCard" />
   }
 </section>
 
@@ -86,7 +96,7 @@
   >
     <!--  -->
     <div class="space-y-4">
-      <p class="text-meta uppercase text-primary-400">The Process</p>
+      <p class="uppercase text-primary-400">The Process</p>
       <h2 class="header-title">
         Your Website
         <span class="header-title--italic">in 5 steps</span>
@@ -101,14 +111,12 @@
       <app-badge
         [badge]="{
           name: Icon.ArrowDown,
-          iconSize: Size.LARGE,
-          svgSize: Size.LARGE,
+          size: Size.LARGE,
         }"
-        class="mb-24 md:mb-0"
+        class="mb-24 lg:mb-0"
       />
 
-      <!-- TODO: Adjust this hight -->
-      <div class="hidden h-24 w-0.5 border md:block"></div>
+      <div class="hidden h-24 w-0.5 border lg:block"></div>
     </div>
   </div>
 
@@ -138,6 +146,7 @@
 <!-- about section -->
 <section class="space-y-16 overflow-hidden pt-40">
   <app-scroll-animation />
+
   <!-- conent -->
   <div class="container grid grid-cols-1 gap-8 md:grid-cols-2">
     <div>
@@ -160,32 +169,28 @@
         <app-badge
           [badge]="{
             name: Icon.Twitter,
-            svgSize: Size.LARGE,
-            iconSize: Size.LARGE,
+            size: Size.LARGE,
           }"
         />
 
         <app-badge
           [badge]="{
             name: Icon.Instagram,
-            svgSize: Size.LARGE,
-            iconSize: Size.LARGE,
+            size: Size.LARGE,
           }"
         />
 
         <app-badge
           [badge]="{
             name: Icon.Dribbble,
-            svgSize: Size.LARGE,
-            iconSize: Size.LARGE,
+            size: Size.LARGE,
           }"
         />
 
         <app-badge
           [badge]="{
             name: Icon.Behance,
-            svgSize: Size.LARGE,
-            iconSize: Size.LARGE,
+            size: Size.LARGE,
           }"
         />
       </div>

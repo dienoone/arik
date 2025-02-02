@@ -1,0 +1,3 @@
+.input {
+  @apply card w-full p-4 placeholder:uppercase placeholder:text-primary-400 placeholder:opacity-70 focus:border-primary-300;
+}

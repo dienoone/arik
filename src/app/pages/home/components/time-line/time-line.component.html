@@ -1,53 +1,51 @@
-<div class="grid grid-cols-1 gap-8 md:gap-0">
+<div class="grid grid-cols-1 gap-8 lg:gap-0">
   @for (card of cards; track $index) {
-  <div
-    appAnimateOnScroll
-    class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8"
-    [ngClass]="{
-      'md:-mt-14': !$first
-    }"
-  >
-    @if($even) {
-    <div class="hidden md:block"></div>
+    <div
+      appAnimateOnScroll
+      class="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto_1fr]"
+      [ngClass]="{
+        'lg:-mt-14': !$first,
+      }"
+    >
+      @if ($even) {
+        <div class="hidden lg:block"></div>
 
-    <div class="hidden space-y-4 md:flex md:flex-col md:items-center">
-      <div
-        class="border w-0.5 grow"
-        [ngClass]="{
-          'max-h-[calc(50%-16px)]': $last
-        }"
-      ></div>
+        <div class="hidden space-y-4 lg:flex lg:flex-col lg:items-center">
+          <div
+            class="w-0.5 grow border"
+            [ngClass]="{
+              'max-h-[calc(50%-16px)]': $last,
+            }"
+          ></div>
 
-      <app-badge
-        [badge]="{
-          name: '0' + ($index + 1),
-          iconSize: Size.LARGE,
-          svgSize: Size.LARGE
-        }"
-      />
+          <app-badge
+            [badge]="{
+              name: '0' + ($index + 1),
+              size: Size.LARGE,
+            }"
+          />
 
-      <div class="border w-0.5 grow" [class.hidden]="$last"></div>
+          <div class="w-0.5 grow border" [class.hidden]="$last"></div>
+        </div>
+      }
+
+      <app-time-line-card [data]="card" />
+
+      @if ($odd) {
+        <div class="hidden space-y-4 lg:flex lg:flex-col lg:items-center">
+          <div class="w-0.5 grow border"></div>
+          <app-badge
+            [badge]="{
+              name: '0' + ($index + 1),
+              size: Size.LARGE,
+            }"
+          />
+
+          <div class="w-0.5 grow border"></div>
+        </div>
+
+        <div class="hidden lg:block"></div>
+      }
     </div>
-    }
-
-    <app-time-line-card [data]="card" />
-
-    @if($odd) {
-    <div class="hidden space-y-4 md:flex md:flex-col md:items-center">
-      <div class="border w-0.5 grow"></div>
-      <app-badge
-        [badge]="{
-          name: '0' + ($index + 1),
-          iconSize: Size.LARGE,
-          svgSize: Size.LARGE
-        }"
-      />
-
-      <div class="border w-0.5 grow"></div>
-    </div>
-
-    <div class="hidden md:block"></div>
-    }
-  </div>
   }
 </div>
