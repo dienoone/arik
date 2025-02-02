@@ -52,6 +52,16 @@ module.exports = {
       borderColor: {
         DEFAULT: 'hsla(35, 41%, 75%, 0.15)',
       },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        scroll: 'scroll 20s linear infinite',
+        'scroll-pause': 'scroll 20s linear infinite paused',
+      },
     },
   },
   plugins: [],
